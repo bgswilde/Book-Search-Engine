@@ -26,7 +26,7 @@ const typeDefs = gql`
     image: String
     link: String
   } 
-
+  
   type Query {
     me: User
   }
