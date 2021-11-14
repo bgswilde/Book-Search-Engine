@@ -13,7 +13,7 @@ const resolvers = {
           .populate('savedBooks');
         return userData;
       }
-
+      console.log(userData)
       throw new AuthenticationError('Not logged in')
     }
   },
@@ -43,12 +43,12 @@ const resolvers = {
       return { user, token };
     },
 
-    saveBook: async (parent, args, context) => {
-      console.log(`saveBook mutation args: ${args}`);
+    saveBook: async (parent, { body }, context) => {
+      console.log(`saveBook mutation args: ${body}`);
       if (context.user) {
         const updatedUser = await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { bookDetails: args } },
+          { $addToSet: { savedBooks: body } },
           { new: true, runValidators: true }
         );
         return updatedUser;
