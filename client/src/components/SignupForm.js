@@ -55,11 +55,11 @@ const SignupForm = () => {
     <>
       {/* This is needed for the validation functionality above */}
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
-        {/* show alert if server response is bad */}
+        {error &&
         <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
           Something went wrong with your signup!
         </Alert>
-
+        }
         <Form.Group>
           <Form.Label htmlFor='username'>Username</Form.Label>
           <Form.Control
@@ -105,7 +105,6 @@ const SignupForm = () => {
           Submit
         </Button>
       </Form>
-      {error && <div>Signup Failed!</div>}
     </>
   );
 };

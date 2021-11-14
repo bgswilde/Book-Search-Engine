@@ -5,10 +5,8 @@ import { REMOVE_BOOK } from '../utils/mutations';
 import { Jumbotron, Container, CardColumns, Card, Button } from 'react-bootstrap';
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
-import { QUERY_ME } from '../utils/queries';
 
 const SavedBooks = () => {
-  // const [userData, setUserData] = useState({});
 
   // // use this to determine if `useEffect()` hook needs to run again
   // const userDataLength = Object.keys(userData).length;
@@ -32,8 +30,6 @@ const SavedBooks = () => {
         throw new Error('something went wrong!');
       }
 
-      const updatedUser = await response.json();
-      setUserData(updatedUser);
       // upon success, remove book's id from localStorage
       removeBookId(bookId);
     } catch (err) {
