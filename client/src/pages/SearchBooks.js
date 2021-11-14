@@ -106,7 +106,6 @@ const SearchBooks = () => {
               </Col>
             </Form.Row>
           </Form>
-          {error && <div>Something went wrong!</div>}
         </Container>
       </Jumbotron>
 
@@ -135,7 +134,9 @@ const SearchBooks = () => {
                       {savedBookIds?.some((savedBookId) => savedBookId === book.bookId)
                         ? 'This book has already been saved!'
                         : 'Save this Book!'}
+                      {error && <div>Something went wrong!</div>}
                     </Button>
+                    
                   )}
                 </Card.Body>
               </Card>
