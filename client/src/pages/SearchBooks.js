@@ -63,8 +63,9 @@ const SearchBooks = () => {
     // find the book in `searchedBooks` state by the matching id
     const bookToSave = await searchedBooks.find((book) => book.bookId === bookId);
     
+    // show the book title of saved book in console for verification
     console.log(`target book: ${bookToSave.title}`);
-    console.log(`token: ${token}`)
+
     if (!token) {
       return false;
     }
