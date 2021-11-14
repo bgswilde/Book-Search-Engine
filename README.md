@@ -1,5 +1,6 @@
 # Book Search Engine
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[Deployed Application on Heroku](https://arcane-scrubland-99414.herokuapp.com/)
 
 ## Description
 The purpose of this application is to provide a way for a user to search books from the google books API, retrieve data pertaining to the books they are looking for, and save a list of books with the needed data to visit later. This is a MERN application with GraphQL, utlizing the following technologies:
@@ -31,6 +32,7 @@ To use this application, use the deployed link below to search books, signing up
 Follow the installation instructions above. If you'd like to customize the data using different endpoints from Google Books API after installing this repo locally, see the data you can get at the [Google Books API documentation](https://developers.google.com/books/docs/v1/using). To test out your graphql queries/mutations and your react front end, run "npm run develop" from the root folder of this application in your command line.
 
 ### Deployed link and Screenshots
+[Deployed Application Link](https://arcane-scrubland-99414.herokuapp.com/)
 ![screenshot 1](./screenshots/BookSearch1.png)
 ![screenshot 2](./screenshots/BookSearch2.png)
 ![screenshot 3](./screenshots/BookSearch3.png)
